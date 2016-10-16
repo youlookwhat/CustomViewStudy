@@ -49,6 +49,9 @@ public class CustomTitleView extends View {
     public CustomTitleView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         Log.e("-----CustomTitleView:", "333");
+        /**
+         * 获得我们所定义的自定义样式属性
+         */
         TypedArray typedArray = context.getTheme().obtainStyledAttributes(attrs, R.styleable.CustomTitleView, defStyleAttr, 0);
         int n = typedArray.getIndexCount();
 
@@ -119,6 +122,55 @@ public class CustomTitleView extends View {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         Log.e("-----onMeasure:", "111");
 
+        //之前自己参照博客写的:
+//        myOnMeasure(widthMeasureSpec, heightMeasureSpec);
+        // 源码
+        sourceOnMeasure(widthMeasureSpec, heightMeasureSpec);
+
+
+    }
+
+    /**
+     * 源码
+     * */
+    private void sourceOnMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        // super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int width = 0;
+        int height = 0;
+        /**
+         * 设置宽度
+         */
+        int specMode = MeasureSpec.getMode(widthMeasureSpec);
+        int specSize = MeasureSpec.getSize(widthMeasureSpec);
+        switch (specMode) {
+            case MeasureSpec.EXACTLY://明确指定了
+                width = getPaddingLeft() + getPaddingRight() + specSize;
+                break;
+            case MeasureSpec.AT_MOST:// 一般为WARP_CONTENT
+                width = getPaddingLeft() + getPaddingRight() + mRect.width();
+                break;
+        }
+        /**
+         * 设置高度
+         */
+        specMode = MeasureSpec.getMode(heightMeasureSpec);
+        specSize = MeasureSpec.getSize(heightMeasureSpec);
+        switch (specMode) {
+            case MeasureSpec.EXACTLY://明确指定了
+                height = getPaddingTop() + getPaddingBottom() + specSize;
+                break;
+            case MeasureSpec.AT_MOST:// 一般为WARP_CONTENT
+                height = getPaddingTop() + getPaddingBottom() + mRect.height();
+                break;
+        }
+        setMeasuredDimension(width, height);
+    }
+
+
+    /**
+     * 之前自己参照博客写的:
+     */
+    private void myOnMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
@@ -146,7 +198,6 @@ public class CustomTitleView extends View {
             height = desired;
         }
         setMeasuredDimension(width, height);
-
     }
 
     @Override
