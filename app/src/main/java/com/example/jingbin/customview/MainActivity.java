@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.jingbin.customview.activity.CustomImageViewActivity;
+import com.example.jingbin.customview.activity.CustomProgressBarActivity;
 import com.example.jingbin.customview.activity.CustomTitleViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         showCustomView01();
         showCustomView02();
+        showCustomView03();
     }
 
 
@@ -36,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(v.getContext(), CustomImageViewActivity.class));
+            }
+        });
+    }
+
+    private void showCustomView03() {
+        findViewById(R.id.bt_custom_view_03).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), CustomProgressBarActivity.class));
             }
         });
     }

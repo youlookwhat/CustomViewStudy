@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.CustomTitleViewActivity" />
-        <activity android:name=".activity.CustomImageViewActivity"/>
+        <activity android:name=".activity.CustomImageViewActivity" />
+        <activity android:name=".activity.CustomProgressBarActivity"/>
     </application>
 
 </manifest>

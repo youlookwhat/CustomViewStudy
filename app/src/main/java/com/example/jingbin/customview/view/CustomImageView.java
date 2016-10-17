@@ -37,12 +37,18 @@ public class CustomImageView extends View {
     private int mTitleTextSize;
     // 文字颜色
     private int mTitleTextColor;
+    // 用来画图片使用
     private Rect mRect;
-    private Paint mPaint;
+    // 用来画文字使用
     private Rect mTextBound;
+    // 画笔
+    private Paint mPaint;
 
+    // 宽
     private int mWidth;
+    // 高
     private int mHeight;
+    // 缩放形式
     private int IMAGE_SCALE_FITXY = 0;
 
 
