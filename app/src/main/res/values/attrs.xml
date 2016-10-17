@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--CustomTitleView-->
     <attr name="titleText" format="string" />
     <attr name="titleTextColor" format="color" />
     <attr name="titleTextSize" format="dimension" />
-
 
     <declare-styleable name="CustomTitleView">
         <attr name="titleText" />
@@ -12,4 +12,21 @@
         <attr name="titleTextSize" />
     </declare-styleable>
 
+    <!--CustomImageView  1、自定义View的属性 -->
+    <attr name="imageTitleText" format="string" />
+    <attr name="imageTitleTextColor" format="color" />
+    <attr name="imageTitleTextSize" format="dimension" />
+    <attr name="image" format="reference" /><!--注意image的格式-->
+    <attr name="imageScaleType">
+        <enum name="fillXY" value="0" />
+        <enum name="center" value="1" />
+    </attr>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="imageTitleText" />
+        <attr name="imageTitleTextColor" />
+        <attr name="imageTitleTextSize" />
+        <attr name="image" />
+        <attr name="imageScaleType" />
+    </declare-styleable>
 </resources>

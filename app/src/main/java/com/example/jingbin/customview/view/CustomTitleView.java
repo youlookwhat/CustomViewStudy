@@ -18,6 +18,14 @@ import java.util.Random;
 
 /**
  * Created by jingbin on 16/9/29.
+ * <p>
+ * <p>
+ * -----onMeasure:: 111
+ * -----onMeasure:: 111
+ * -----onDraw:: 111
+ * -----onMeasure:: 111
+ * -----onMeasure:: 111
+ * -----onDraw:: 111
  */
 
 public class CustomTitleView extends View {
@@ -132,7 +140,7 @@ public class CustomTitleView extends View {
 
     /**
      * 源码
-     * */
+     */
     private void sourceOnMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         // super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int width = 0;
@@ -147,6 +155,7 @@ public class CustomTitleView extends View {
                 width = getPaddingLeft() + getPaddingRight() + specSize;
                 break;
             case MeasureSpec.AT_MOST:// 一般为WARP_CONTENT
+            case MeasureSpec.UNSPECIFIED:
                 width = getPaddingLeft() + getPaddingRight() + mRect.width();
                 break;
         }
@@ -160,6 +169,7 @@ public class CustomTitleView extends View {
                 height = getPaddingTop() + getPaddingBottom() + specSize;
                 break;
             case MeasureSpec.AT_MOST:// 一般为WARP_CONTENT
+            case MeasureSpec.UNSPECIFIED:
                 height = getPaddingTop() + getPaddingBottom() + mRect.height();
                 break;
         }
@@ -219,5 +229,6 @@ public class CustomTitleView extends View {
          *
          * */
         canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2, getHeight() / 2 + mRect.height() / 2, mPaint);
+//        canvas.drawText(mTitleText, getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
     }
 }

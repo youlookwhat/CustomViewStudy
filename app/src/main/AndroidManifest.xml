@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.CustomTitleViewActivity"/>
+        <activity android:name=".activity.CustomTitleViewActivity" />
+        <activity android:name=".activity.CustomImageViewActivity"/>
     </application>
 
 </manifest>

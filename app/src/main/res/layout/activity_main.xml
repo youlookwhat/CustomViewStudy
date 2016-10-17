@@ -17,4 +17,10 @@
         android:layout_height="wrap_content"
         android:text="Android 自定义View (一)" />
 
+    <Button
+        android:id="@+id/bt_custom_view_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Android 自定义View (二) 进阶" />
+
 </LinearLayout>
