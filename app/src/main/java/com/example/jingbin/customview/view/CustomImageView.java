@@ -18,6 +18,8 @@ import com.example.jingbin.customview.R;
 
 /**
  * Created by jingbin on 2016/10/16.
+ *
+ *  Android 自定义View (二) 进阶:
  * 1、自定义View的属性
  * 2、在View的构造方法中获得我们自定义的属性
  * [ 3、重写onMesure ]

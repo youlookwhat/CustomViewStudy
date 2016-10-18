@@ -18,7 +18,7 @@ import java.util.Random;
 
 /**
  * Created by jingbin on 16/9/29.
- * <p>
+ * <p> Android 自定义View (一)
  * <p>
  * -----onMeasure:: 111
  * -----onMeasure:: 111

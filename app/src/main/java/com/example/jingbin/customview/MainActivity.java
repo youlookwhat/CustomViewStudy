@@ -12,51 +12,36 @@ import com.example.jingbin.customview.activity.CustomTitleViewActivity;
 /**
  * Created by jingbin on 16/9/29.
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        showCustomView01();
-        showCustomView02();
-        showCustomView03();
+
+        initView();
     }
 
+    private void initView() {
+        findViewById(R.id.bt_custom_view_01).setOnClickListener(this);
+        findViewById(R.id.bt_custom_view_02).setOnClickListener(this);
+        findViewById(R.id.bt_custom_view_03).setOnClickListener(this);
+    }
 
-    /**
-     * 点击更换验证码(4位随机数字)
-     */
-    private void showCustomView01() {
-        findViewById(R.id.bt_custom_view_01).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.bt_custom_view_01:// 点击更换验证码(4位随机数字)
                 startActivity(new Intent(v.getContext(), CustomTitleViewActivity.class));
-            }
-        });
-    }
-
-    /**
-     * 图文搭配(上图下文)
-     */
-    private void showCustomView02() {
-        findViewById(R.id.bt_custom_view_02).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.bt_custom_view_02:// 图文搭配(上图下文)
                 startActivity(new Intent(v.getContext(), CustomImageViewActivity.class));
-            }
-        });
-    }
-
-    /**
-     * 自定义圆形进度条
-     */
-    private void showCustomView03() {
-        findViewById(R.id.bt_custom_view_03).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                break;
+            case R.id.bt_custom_view_03:// 自定义圆形进度条
                 startActivity(new Intent(v.getContext(), CustomProgressBarActivity.class));
-            }
-        });
+                break;
+            default:
+                break;
+        }
     }
 }
