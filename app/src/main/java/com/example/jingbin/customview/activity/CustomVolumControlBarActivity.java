@@ -11,5 +11,6 @@ public class CustomVolumControlBarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_volum_control_bar);
+        setTitle("自定义View (四) 视频音量调控");
     }
 }

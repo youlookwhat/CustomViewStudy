@@ -11,5 +11,6 @@ public class CustomImageViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_image_view);
+        setTitle("自定义View (二) 进阶");
     }
 }
