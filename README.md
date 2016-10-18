@@ -22,9 +22,9 @@
 
 ###二. 对应图示：
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_01.png"></img>
-<img width="150" width=“330” src="/image/view_02.png"></img>
-<img width="150" width=“330” src="/image/view_03.png"></img>
-<img width="150" width=“330” src="/image/view_04.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_02.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_03.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_04.png"></img>
 
 
 
