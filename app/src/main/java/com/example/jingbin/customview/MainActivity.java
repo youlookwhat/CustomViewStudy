@@ -9,6 +9,9 @@ import com.example.jingbin.customview.activity.CustomImageViewActivity;
 import com.example.jingbin.customview.activity.CustomProgressBarActivity;
 import com.example.jingbin.customview.activity.CustomTitleViewActivity;
 
+/**
+ * Created by jingbin on 16/9/29.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -33,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * 图文搭配(上图下文)
+     */
     private void showCustomView02() {
         findViewById(R.id.bt_custom_view_02).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * 自定义圆形进度条
+     */
     private void showCustomView03() {
         findViewById(R.id.bt_custom_view_03).setOnClickListener(new View.OnClickListener() {
             @Override

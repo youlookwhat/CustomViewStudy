@@ -8,8 +8,8 @@ import com.example.jingbin.customview.view.CustomProgressBar;
 
 public class CustomProgressBarActivity extends AppCompatActivity {
 
-    private CustomProgressBar custom_progress_bar_01;
-    private CustomProgressBar custom_progress_bar_02;
+    private CustomProgressBar customProgressBar01;
+    private CustomProgressBar customProgressBar02;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,8 +20,8 @@ public class CustomProgressBarActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        custom_progress_bar_01 = (CustomProgressBar) findViewById(R.id.custom_progress_bar_01);
-        custom_progress_bar_02 = (CustomProgressBar) findViewById(R.id.custom_progress_bar_02);
+        customProgressBar01 = (CustomProgressBar) findViewById(R.id.custom_progress_bar_01);
+        customProgressBar02 = (CustomProgressBar) findViewById(R.id.custom_progress_bar_02);
 
     }
 
@@ -29,7 +29,7 @@ public class CustomProgressBarActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        custom_progress_bar_01.setContinue(false);
-        custom_progress_bar_02.setContinue(false);
+        customProgressBar01.setContinue(false);
+        customProgressBar02.setContinue(false);
     }
 }

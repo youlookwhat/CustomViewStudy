@@ -36,9 +36,9 @@ public class CustomProgressBar extends View {
     private int mProgress;
     // 是否开始下一步
     private boolean isNext;
-
+    // 画笔
     private Paint mPaint;
-
+    // 用来开关线程
     private boolean isContinue;
 
     public CustomProgressBar(Context context) {
@@ -90,7 +90,7 @@ public class CustomProgressBar extends View {
                     postInvalidate();
 
                     try {
-                        Thread.sleep(100 / mSpeed);
+                        Thread.sleep(100 / mSpeed);// 这里优化了一下,值越大,速度越快
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -100,6 +100,9 @@ public class CustomProgressBar extends View {
         }.start();
     }
 
+    /**
+     * 4、重写onDraw
+     */
     @Override
     protected void onDraw(Canvas canvas) {
 //        super.onDraw(canvas);
