@@ -132,4 +132,11 @@ public class CustomProgressBar extends View {
     public void setContinue(boolean aContinue) {
         isContinue = aContinue;
     }
+
+//    @Override
+//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+//        MeasureSpec.getMode(widthMeasureSpec);
+//        MeasureSpec.getSize(widthMeasureSpec);
+//    }
 }

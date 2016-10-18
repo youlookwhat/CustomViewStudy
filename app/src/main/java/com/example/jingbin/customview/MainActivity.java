@@ -8,6 +8,7 @@ import android.view.View;
 import com.example.jingbin.customview.activity.CustomImageViewActivity;
 import com.example.jingbin.customview.activity.CustomProgressBarActivity;
 import com.example.jingbin.customview.activity.CustomTitleViewActivity;
+import com.example.jingbin.customview.activity.CustomVolumControlBarActivity;
 
 /**
  * Created by jingbin on 16/9/29.
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.bt_custom_view_01).setOnClickListener(this);
         findViewById(R.id.bt_custom_view_02).setOnClickListener(this);
         findViewById(R.id.bt_custom_view_03).setOnClickListener(this);
+        findViewById(R.id.bt_custom_view_04).setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_custom_view_03:// 自定义圆形进度条
                 startActivity(new Intent(v.getContext(), CustomProgressBarActivity.class));
+                break;
+            case R.id.bt_custom_view_04:// 视频音量调控
+                startActivity(new Intent(v.getContext(), CustomVolumControlBarActivity.class));
                 break;
             default:
                 break;

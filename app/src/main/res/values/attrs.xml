@@ -42,4 +42,22 @@
         <attr name="circleWidth" />
         <attr name="speed" />
     </declare-styleable>
+
+    <!--CustomVolumControlBar-->
+    <attr name="vFirstColor" format="color" />
+    <attr name="vSecondColor" format="color" />
+    <attr name="vCircleWidth" format="dimension" />
+    <attr name="vDotCount" format="integer" />
+    <attr name="vSplitSize" format="integer" />
+    <attr name="vBg" format="reference" /><!--注意格式-->
+
+    <declare-styleable name="CustomVolumControlBar">
+        <attr name="vFirstColor" />
+        <attr name="vSecondColor" />
+        <attr name="vCircleWidth" />
+        <attr name="vDotCount" />
+        <attr name="vSplitSize" />
+        <attr name="vBg" />
+
+    </declare-styleable>
 </resources>

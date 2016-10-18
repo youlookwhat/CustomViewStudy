@@ -52,6 +52,7 @@ public class CustomImageView extends View {
     private int mHeight;
     // 缩放形式
     private int IMAGE_SCALE_FITXY = 0;
+    private int IMAGE_SCALE_CENTER = 1;
 
 
     public CustomImageView(Context context) {

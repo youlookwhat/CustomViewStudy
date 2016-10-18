@@ -28,4 +28,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="自定义View (三) 圆环交替 等待效果" />
+
+    <Button
+        android:id="@+id/bt_custom_view_04"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义View (四) 视频音量调控" />
 </LinearLayout>
