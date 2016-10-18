@@ -21,10 +21,10 @@
 ####7. [Android ViewDragHelper完全解析 自定义ViewGroup神器](http://blog.csdn.net/lmj623565791/article/details/46858663)
 
 ###二. 对应图示：
-<img width="150" width=“350” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_01.png"></img>
-<img width="150" width=“350” src="/image/view_02.png"></img>
-<img width="150" width=“350” src="/image/view_03.png"></img>
-<img width="150" width=“350” src="/image/view_04.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_01.png"></img>
+<img width="150" width=“330” src="/image/view_02.png"></img>
+<img width="150" width=“330” src="/image/view_03.png"></img>
+<img width="150" width=“330” src="/image/view_04.png"></img>
 
 
 
