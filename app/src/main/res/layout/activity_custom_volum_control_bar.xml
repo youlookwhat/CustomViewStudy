@@ -27,12 +27,12 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"
+        android:layout_margin="15dp"
         vol:vBg="@drawable/vol_03"
         vol:vCircleWidth="12dp"
         vol:vDotCount="10"
         vol:vFirstColor="@android:color/black"
-        vol:vSecondColor="@color/colorAccent"
+        vol:vSecondColor="@color/colorPrimary"
         vol:vSplitSize="15" />
 
     <com.example.jingbin.customview.view.CustomVolumControlBar
@@ -44,7 +44,7 @@
         vol:vCircleWidth="15dp"
         vol:vDotCount="11"
         vol:vFirstColor="@android:color/black"
-        vol:vSecondColor="@color/colorAccent"
+        vol:vSecondColor="@android:color/white"
         vol:vSplitSize="15" />
 
 </LinearLayout>
