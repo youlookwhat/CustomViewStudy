@@ -25,6 +25,7 @@
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_02.png"></img>
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_03.png"></img>
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_04.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/image/view_05.png"></img>
 
 
 
