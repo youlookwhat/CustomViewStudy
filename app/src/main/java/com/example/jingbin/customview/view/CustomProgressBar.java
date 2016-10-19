@@ -107,7 +107,7 @@ public class CustomProgressBar extends View {
     @Override
     protected void onDraw(Canvas canvas) {
 //        super.onDraw(canvas);
-        int center = getWidth() / 2;// 获取圆心的x坐标
+        int center = getWidth() / 2;// 获取圆心的x坐标         getMeasuredWidth()也行!!!!
         int radius = center - mCircleWidth / 2;// b半径
         mPaint.setStrokeWidth(mCircleWidth);//设置圆环的宽度
         mPaint.setAntiAlias(true);//抗锯齿

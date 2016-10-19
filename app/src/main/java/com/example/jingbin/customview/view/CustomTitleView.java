@@ -215,12 +215,12 @@ public class CustomTitleView extends View {
         Log.e("-----onDraw:", "111");
         mPaint.setColor(Color.YELLOW);
         // 画布,左上右下
-        canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), mPaint);
+        canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint); // getMeasuredWidth()也可以。
         // 画笔
         mPaint.setColor(mTitleTextColor);
         // 画布,画Text  *****
         /**
-         * 用的是其中一个drawText重载方法:canvas.drawText(String text,float x,float y,Paint paint); x和y是绘制时的起点坐标
+         * 用的是其中一个drawText重载方法:canvas.drawText(String text,float x,float y,Paint paint); x和y是绘制时的起点坐标(左下角)
          * x和y是绘制时的起点坐标, getWidth() / 2 - mRect.width() / 2 其实是为了居中绘制文本,
          * getWidth()是获取自定义View的宽度,
          * mRect.width()是获取文本的宽度,

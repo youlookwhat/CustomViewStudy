@@ -120,7 +120,7 @@ public class CustomImageView extends View {
             mWidth = specSize;
         } else {
             // 图片宽
-            int mImageWidth = getPaddingLeft() + getPaddingRight() + mImage.getWidth();
+            int mImageWidth = getPaddingLeft() + getPaddingRight() + mImage.getWidth();//图片宽:直接getWidth();
             // 文字宽
             int mTextWidth = getPaddingLeft() + getPaddingRight() + mTextBound.width();
             if (specMode == MeasureSpec.AT_MOST) {
