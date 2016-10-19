@@ -19,6 +19,7 @@
         <activity android:name=".activity.CustomImageViewActivity" />
         <activity android:name=".activity.CustomProgressBarActivity" />
         <activity android:name=".activity.CustomVolumControlBarActivity" />
+        <activity android:name=".activity.CustomImgContainerActivity"></activity>
     </application>
 
 </manifest>

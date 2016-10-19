@@ -34,4 +34,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="自定义View (四) 视频音量调控" />
+
+    <Button
+        android:id="@+id/bt_custom_view_05"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="手把手教您自定义ViewGroup(一)" />
 </LinearLayout>

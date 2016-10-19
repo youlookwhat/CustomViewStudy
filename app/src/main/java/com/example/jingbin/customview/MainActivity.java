@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.jingbin.customview.activity.CustomImageViewActivity;
+import com.example.jingbin.customview.activity.CustomImgContainerActivity;
 import com.example.jingbin.customview.activity.CustomProgressBarActivity;
 import com.example.jingbin.customview.activity.CustomTitleViewActivity;
 import com.example.jingbin.customview.activity.CustomVolumControlBarActivity;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.bt_custom_view_02).setOnClickListener(this);
         findViewById(R.id.bt_custom_view_03).setOnClickListener(this);
         findViewById(R.id.bt_custom_view_04).setOnClickListener(this);
+        findViewById(R.id.bt_custom_view_05).setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_custom_view_04:// 视频音量调控
                 startActivity(new Intent(v.getContext(), CustomVolumControlBarActivity.class));
+                break;
+            case R.id.bt_custom_view_05:// 左上右下的图片显示(ViewGroup)
+                startActivity(new Intent(v.getContext(), CustomImgContainerActivity.class));
                 break;
             default:
                 break;
