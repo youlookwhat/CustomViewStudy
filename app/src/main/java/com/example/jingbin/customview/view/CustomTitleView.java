@@ -156,7 +156,9 @@ public class CustomTitleView extends View {
                 break;
             case MeasureSpec.AT_MOST:// 一般为WARP_CONTENT
             case MeasureSpec.UNSPECIFIED:
-                width = getPaddingLeft() + getPaddingRight() + mRect.width();
+//                int textWidth = mRect.width(); // 这样mRect.width()直接计算出来的会有误差
+                float textWidth = mPaint.measureText(mTitleText);
+                width = (int) (getPaddingLeft() + getPaddingRight() + textWidth);
                 break;
         }
         /**
@@ -170,7 +172,11 @@ public class CustomTitleView extends View {
                 break;
             case MeasureSpec.AT_MOST:// 一般为WARP_CONTENT
             case MeasureSpec.UNSPECIFIED:
-                height = getPaddingTop() + getPaddingBottom() + mRect.height();
+//                int textHeight = mRect.height(); //直接计算出来的会有误差
+                Paint.FontMetrics fontMetrics = mPaint.getFontMetrics();
+//                float textHeight = Math.abs((fontMetrics.descent - fontMetrics.ascent));
+                float textHeight = Math.abs((fontMetrics.bottom - fontMetrics.top));
+                height = (int) (getPaddingTop() + getPaddingBottom() + textHeight);
                 break;
         }
         setMeasuredDimension(width, height);
@@ -193,7 +199,8 @@ public class CustomTitleView extends View {
         } else {
             mPaint.setTextSize(mTitleTextSize);
             mPaint.getTextBounds(mTitleText, 0, mTitleText.length(), mRect);
-            float textWidth = mRect.width();
+//            float textWidth = mRect.width();
+            float textWidth = mPaint.measureText(mTitleText);
             int desired = (int) (getPaddingLeft() + textWidth + getPaddingRight());
             width = desired;
         }
@@ -203,7 +210,9 @@ public class CustomTitleView extends View {
         } else {
             mPaint.setTextSize(mTitleTextSize);
             mPaint.getTextBounds(mTitleText, 0, mTitleText.length(), mRect);
-            float textHeight = mRect.height();
+//            float textHeight = mRect.height();
+            Paint.FontMetrics fontMetrics = mPaint.getFontMetrics();
+            float textHeight = Math.abs((fontMetrics.descent - fontMetrics.ascent));
             int desired = (int) (getPaddingTop() + textHeight + getPaddingBottom());
             height = desired;
         }
@@ -213,7 +222,8 @@ public class CustomTitleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         Log.e("-----onDraw:", "111");
-        mPaint.setColor(Color.YELLOW);
+        mPaint.setColor(Color.BLACK);
+        mPaint.setAntiAlias(true);
         // 画布,左上右下
         canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint); // getMeasuredWidth()也可以。
         // 画笔
@@ -227,8 +237,14 @@ public class CustomTitleView extends View {
          * 你可能是想问为什么不是直接getWidth() / 2吧?
          * 这样的话文本就是从水平方向中间位置向右绘制,绘制的文本当然就不是居中了,要减去mRect.width() / 2才是水平居中.垂直方向同理.
          *
+         * "0 + getPaddingLeft()": 绘制文本的起点X
+         *   "0": 直接从"0"开始就可以(文字会自带一点默认间距)
+         *
          * */
-        canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2, getHeight() / 2 + mRect.height() / 2, mPaint);
+        Log.e("---->", "getWidth():" + getWidth());
+        Log.e("---->", "mRect.width():" + mRect.width());
+//        canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2, getHeight() / 2 + mRect.height() / 2, mPaint);
+        canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
 //        canvas.drawText(mTitleText, getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
     }
 }
