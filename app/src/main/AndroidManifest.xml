@@ -2,10 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jingbin.customview">
 
+    <!--网络-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--选择照片所需权限-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".app.ViewApplication"
@@ -28,7 +31,7 @@
         <activity android:name=".activity.CustomImgContainerActivity" />
         <activity android:name=".activity.DeepUnderstandAttrActivity" />
         <activity android:name=".activity.VDHLayoutActivity" />
-        <activity android:name=".activity.VDHDeepLayoutActivity"/>
+        <activity android:name=".activity.VDHDeepLayoutActivity" />
     </application>
 
 </manifest>
