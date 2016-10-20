@@ -22,7 +22,36 @@
 
 ---
 
-###二. Code Optimization
+###二. Source Code
+
+>- 1.[CustomTitleView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomTitleView.java)
+
+>- 2.[CustomImageView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomImageView.java)
+
+>- 3.[CustomProgressBar.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomProgressBar.java)
+
+>- 4.[CustomVolumControlBar.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomVolumControlBar.java)
+
+>- 5.[CustomImgContainer.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/CustomImgContainer.java)
+
+>- 6.[DeepUnderstandAttrActivity.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/activity/DeepUnderstandAttrActivity.java)
+
+>- 7.[VDHDeepLayout.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/VDHDeepLayout.java)
+
+---
+###三. Picture
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_00.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_01.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_02.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_03.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_04.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_05.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_06.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_07.png"></img>
+
+---
+
+###四. Code Optimization
 ####1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android 自定义View (一)优化.md)
 
 #####1.1 关于文字显示优化：
@@ -102,34 +131,6 @@ Activity相关代码：
 ``` 
 ---
 
-###三. Source Code
-
->- 1.[CustomTitleView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomTitleView.java)
-
->- 2.[CustomImageView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomImageView.java)
-
->- 3.[CustomProgressBar.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomProgressBar.java)
-
->- 4.[CustomVolumControlBar.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomVolumControlBar.java)
-
->- 5.[CustomImgContainer.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/CustomImgContainer.java)
-
->- 6.[DeepUnderstandAttrActivity.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/activity/DeepUnderstandAttrActivity.java)
-
->- 7.[VDHDeepLayout.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/VDHDeepLayout.java)
-
----
-###四. Picture
-<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_00.png"></img>
-<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_01.png"></img>
-<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_02.png"></img>
-<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_03.png"></img>
-<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_04.png"></img>
-<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_05.png"></img>
-<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_06.png"></img>
-<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_07.png"></img>
-
----
 ###五. Thanks
 - [CSDN:张鸿洋](http://blog.csdn.net/lmj623565791)
 
