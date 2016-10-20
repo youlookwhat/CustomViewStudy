@@ -40,4 +40,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="手把手教您自定义ViewGroup(一)" />
+
+    <Button
+        android:id="@+id/bt_custom_view_06"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="深入理解Android中的自定义属性" />
 </LinearLayout>
