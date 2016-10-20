@@ -11,6 +11,7 @@ import com.example.jingbin.customview.activity.CustomProgressBarActivity;
 import com.example.jingbin.customview.activity.CustomTitleViewActivity;
 import com.example.jingbin.customview.activity.CustomVolumControlBarActivity;
 import com.example.jingbin.customview.activity.DeepUnderstandAttrActivity;
+import com.example.jingbin.customview.activity.VDHDeepLayoutActivity;
 
 /**
  * Created by jingbin on 16/9/29.
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.bt_custom_view_04).setOnClickListener(this);
         findViewById(R.id.bt_custom_view_05).setOnClickListener(this);
         findViewById(R.id.bt_custom_view_06).setOnClickListener(this);
+        findViewById(R.id.bt_custom_view_07).setOnClickListener(this);
     }
 
     @Override
@@ -54,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_custom_view_06:// 深入理解Android中的自定义属性
                 startActivity(new Intent(v.getContext(), DeepUnderstandAttrActivity.class));
+                break;
+            case R.id.bt_custom_view_07:// ViewDragHelper完全解析 自定义ViewGroup神器
+                startActivity(new Intent(v.getContext(), VDHDeepLayoutActivity.class));
                 break;
             default:
                 break;

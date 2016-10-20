@@ -46,4 +46,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="深入理解Android中的自定义属性" />
+
+    <Button
+        android:id="@+id/bt_custom_view_07"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ViewDragHelper完全解析" />
 </LinearLayout>
