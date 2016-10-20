@@ -23,14 +23,14 @@
 ---
 
 ###二. Code Optimization
-####1. CustomTitleView优化
+####1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/Android 自定义View (一)优化.md)
 
 #####1.1 关于文字显示优化：
 ``` java
-//                int textWidth = mRect.width(); // 这样mRect.width()直接计算出来的会有误差
-                float textWidth = mPaint.measureText(mTitleText);
+//             int textWidth = mRect.width(); // 这样mRect.width()直接计算出来的会有误差
+               float textWidth = mPaint.measureText(mTitleText);
 
-//                int textHeight = mRect.height(); //直接计算出来的会有误差
+//              int textHeight = mRect.height(); //直接计算出来的会有误差
                 Paint.FontMetrics fontMetrics = mPaint.getFontMetrics();
                 float textHeight = Math.abs((fontMetrics.bottom - fontMetrics.top));
 ```
