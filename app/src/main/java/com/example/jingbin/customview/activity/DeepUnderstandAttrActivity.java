@@ -3,6 +3,7 @@ package com.example.jingbin.customview.activity;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -84,5 +85,19 @@ public class DeepUnderstandAttrActivity extends AppCompatActivity {
             handler.proceed();
             super.onReceivedSslError(view, handler, error);
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (webView.canGoBack()) {
+                webView.goBack();
+                return true;
+            } else {
+                webView.loadUrl("about:blank");
+                finish();
+            }
+        }
+        return false;
     }
 }
