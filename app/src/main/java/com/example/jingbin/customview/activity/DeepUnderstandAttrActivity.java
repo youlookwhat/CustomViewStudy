@@ -29,7 +29,7 @@ import com.example.jingbin.customview.utils.SPUtils;
  * <p>
  * 网页可以处理:
  * 点击相应控件:拨打电话、发送短信、发送邮件、上传图片、播放视频
- * 进度条、返回网页上一层
+ * 进度条、返回网页上一层、显示网页标题
  */
 public class DeepUnderstandAttrActivity extends AppCompatActivity {
 
@@ -161,17 +161,7 @@ public class DeepUnderstandAttrActivity extends AppCompatActivity {
                 "objs[i].onclick=function(){window.injectedObject.imageClick(this.getAttribute(\"src\"),this.getAttribute(\"has_link\"));}" +
                 "}" +
                 "})()");
-
-        webView.loadUrl("javascript:(function(){" +
-                "var objs =document.getElementsByTagName(\"a\");" +
-                "for(var i=0;i<objs.length;i++)" +
-                "{" +
-                "objs[i].onclick=function(){" +
-                "window.injectedObject.textClick(this.getAttribute(\"kaws_type\"),this.getAttribute(\"kaws_item_pk\"));}" +
-                "}" +
-                "})()");
     }
-
 
     /**
      * 进度条 假装加载到90%

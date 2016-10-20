@@ -12,6 +12,6 @@ public class VDHDeepLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vdhdeep_layout);
 
-        setTitle("ViewDragHelper完全解析(加深)");
+        setTitle("ViewDragHelper完全解析");
     }
 }
