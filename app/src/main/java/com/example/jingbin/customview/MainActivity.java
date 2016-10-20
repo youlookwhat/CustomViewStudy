@@ -10,6 +10,7 @@ import com.example.jingbin.customview.activity.CustomImgContainerActivity;
 import com.example.jingbin.customview.activity.CustomProgressBarActivity;
 import com.example.jingbin.customview.activity.CustomTitleViewActivity;
 import com.example.jingbin.customview.activity.CustomVolumControlBarActivity;
+import com.example.jingbin.customview.activity.DeepUnderstandAttrActivity;
 
 /**
  * Created by jingbin on 16/9/29.
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.bt_custom_view_03).setOnClickListener(this);
         findViewById(R.id.bt_custom_view_04).setOnClickListener(this);
         findViewById(R.id.bt_custom_view_05).setOnClickListener(this);
+        findViewById(R.id.bt_custom_view_06).setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_custom_view_05:// 左上右下的图片显示(ViewGroup)
                 startActivity(new Intent(v.getContext(), CustomImgContainerActivity.class));
+                break;
+            case R.id.bt_custom_view_06:// 深入理解Android中的自定义属性
+                startActivity(new Intent(v.getContext(), DeepUnderstandAttrActivity.class));
                 break;
             default:
                 break;
