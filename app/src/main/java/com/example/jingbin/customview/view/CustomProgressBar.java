@@ -15,8 +15,8 @@ import com.example.jingbin.customview.R;
 
 /**
  * Created by jingbin on 2016/10/17.
- *
- *  Android 自定义View (三) 圆环交替 等待效果:
+ * <p>
+ * Android 自定义View (三) 圆环交替 等待效果:
  * 1、自定义View的属性
  * 2、在View的构造方法中获得我们自定义的属性
  * [ 3、重写onMesure ](这里不需要)
@@ -107,7 +107,9 @@ public class CustomProgressBar extends View {
     @Override
     protected void onDraw(Canvas canvas) {
 //        super.onDraw(canvas);
-        int center = getWidth() / 2;// 获取圆心的x坐标         getMeasuredWidth()也行!!!!
+        // 这里使用width主要是用来防止用户使用wrap_content,会占满整个屏幕宽,默认为200dp
+        int center = width / 2;// 获取圆心的x坐标         getMeasuredWidth()也行!!!!
+        Log.e("------------->", "getWidth():" + center);
         int radius = center - mCircleWidth / 2;// b半径
         mPaint.setStrokeWidth(mCircleWidth);//设置圆环的宽度
         mPaint.setAntiAlias(true);//抗锯齿
@@ -133,10 +135,20 @@ public class CustomProgressBar extends View {
         isContinue = aContinue;
     }
 
-//    @Override
-//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    private int width;
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 //        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//        MeasureSpec.getMode(widthMeasureSpec);
-//        MeasureSpec.getSize(widthMeasureSpec);
-//    }
+        int modeWidth = MeasureSpec.getMode(widthMeasureSpec);
+        int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
+
+        if (modeWidth == MeasureSpec.EXACTLY) {
+            width = sizeWidth;
+        } else {//默认宽度
+            width = (int) getContext().getResources().getDimension(R.dimen.width);
+        }
+        Log.e("------------->", "width:" + width);
+        setMeasuredDimension(width, width);
+    }
 }

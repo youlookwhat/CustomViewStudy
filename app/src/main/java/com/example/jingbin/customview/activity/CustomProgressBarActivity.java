@@ -10,6 +10,7 @@ public class CustomProgressBarActivity extends AppCompatActivity {
 
     private CustomProgressBar customProgressBar01;
     private CustomProgressBar customProgressBar02;
+    private CustomProgressBar customProgressBar03;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class CustomProgressBarActivity extends AppCompatActivity {
     private void initView() {
         customProgressBar01 = (CustomProgressBar) findViewById(R.id.custom_progress_bar_01);
         customProgressBar02 = (CustomProgressBar) findViewById(R.id.custom_progress_bar_02);
+        customProgressBar03 = (CustomProgressBar) findViewById(R.id.custom_progress_bar_03);
 
     }
 
@@ -31,5 +33,9 @@ public class CustomProgressBarActivity extends AppCompatActivity {
         super.onStop();
         customProgressBar01.setContinue(false);
         customProgressBar02.setContinue(false);
+        customProgressBar03.setContinue(false);
+        customProgressBar01 = null;
+        customProgressBar02 = null;
+        customProgressBar03 = null;
     }
 }
