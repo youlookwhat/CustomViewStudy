@@ -23,7 +23,7 @@
 ---
 
 ###二. Code Optimization
-####1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/Android 自定义View (一)优化.md)
+####1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android 自定义View (一)优化.md)
 
 #####1.1 关于文字显示优化：
 ``` java
