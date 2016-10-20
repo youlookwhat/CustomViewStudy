@@ -107,6 +107,17 @@ public class VDHDeepLayout extends LinearLayout {
 //                super.onEdgeDragStarted(edgeFlags, pointerId);
                 mViewDragHelper.captureChildView(mEdgeTrackerView, pointerId);
             }
+
+            // clickable=true，意思就是子View可以消耗事件
+            @Override
+            public int getViewHorizontalDragRange(View child) {
+                return getMeasuredWidth() - child.getMeasuredWidth();
+            }
+
+            @Override
+            public int getViewVerticalDragRange(View child) {
+                return getMeasuredHeight() - child.getMeasuredHeight();
+            }
         });
         // 注意如果需要使用边界检测需要添加  ViewDragHelper.EDGE_LEFT
         mViewDragHelper.setEdgeTrackingEnabled(ViewDragHelper.EDGE_RIGHT);
