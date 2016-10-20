@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(v.getContext(), DeepUnderstandAttrActivity.class));
                 break;
             case R.id.bt_custom_view_07:// ViewDragHelper完全解析 自定义ViewGroup神器
+//                startActivity(new Intent(v.getContext(), VDHLayoutActivity.class));
                 startActivity(new Intent(v.getContext(), VDHDeepLayoutActivity.class));
                 break;
             default:
