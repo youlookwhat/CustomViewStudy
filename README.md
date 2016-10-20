@@ -4,7 +4,7 @@
 ###参照Hongyang的CSDN博客所写：
 >[http://blog.csdn.net/lmj623565791/article/category/2680591](http://blog.csdn.net/lmj623565791/article/category/2680591)
 
-###一. 目录：
+###一. Blog Catalogue：
 
 ####1. [Android 自定义View (一)](http://blog.csdn.net/lmj623565791/article/details/24252901)
 
@@ -19,8 +19,12 @@
 ####6. [Android 深入理解Android中的自定义属性](http://blog.csdn.net/lmj623565791/article/details/45022631)
 
 ####7. [Android ViewDragHelper完全解析 自定义ViewGroup神器](http://blog.csdn.net/lmj623565791/article/details/46858663)
-###二. 疑难及优化
-####1. [Android 自定义View (一)优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android 自定义View (一)优化.md)
+
+---
+
+###二. Code Optimization
+####1. CustomTitleView优化
+
 #####1.1 关于文字显示优化：
 ``` java
 //                int textWidth = mRect.width(); // 这样mRect.width()直接计算出来的会有误差
@@ -38,12 +42,96 @@ canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height
 
 >"0":  直接从"0"开始就可以(文字会自带一点默认间距)
 
-###三. 对应图示：
+####2. 圆环交替 等待效果优化
+
+#####2.1 新开线程画线，离开页面时线程未关闭优化
+
+``` java
+// 用来开关线程
+    private boolean isContinue;
+    
+    // 绘图线程
+        new Thread() {
+            public void run() {
+                while (isContinue) {
+                    mProgress++;
+                    if (mProgress == 360) {
+                        mProgress = 0;
+                        isNext = !isNext;
+                    }
+                    Log.e("--------", "在执行..");
+                    postInvalidate();
+
+                    try {
+                        Thread.sleep(100 / mSpeed);// 这里优化了一下,值越大,速度越快
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+        }.start();
+``` 
+Activity相关代码：
+
+``` java
+@Override
+    protected void onStop() {
+        super.onStop();
+        customProgressBar01.setContinue(false);
+        customProgressBar02.setContinue(false);
+        customProgressBar03.setContinue(false);
+    }
+``` 
+#####2.2 用户宽高若设置wrap_content时优化
+``` java
+@Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int modeWidth = MeasureSpec.getMode(widthMeasureSpec);
+        int sizeWidth = MeasureSpec.getSize(widthMeasureSpec);
+
+        if (modeWidth == MeasureSpec.EXACTLY) {
+            width = sizeWidth;
+        } else {//默认宽度200dp
+            width = (int) getContext().getResources().getDimension(R.dimen.width);
+        }
+        Log.e("------------->", "width:" + width);
+        setMeasuredDimension(width, width);
+    }
+``` 
+---
+
+###三. Source Code
+
+>- 1.[CustomTitleView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomTitleView.java)
+
+>- 2.[CustomImageView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomImageView.java)
+
+>- 3.[CustomProgressBar.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomProgressBar.java)
+
+>- 4.[CustomVolumControlBar.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomVolumControlBar.java)
+
+>- 5.[CustomImgContainer.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/CustomImgContainer.java)
+
+>- 6.[DeepUnderstandAttrActivity.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/activity/DeepUnderstandAttrActivity.java)
+
+>- 7.[VDHDeepLayout.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/VDHDeepLayout.java)
+
+---
+###四. Picture
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_00.png"></img>
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_01.png"></img>
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_02.png"></img>
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_03.png"></img>
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_04.png"></img>
 <img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_05.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_06.png"></img>
+<img width="150" width=“330” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_07.png"></img>
+
+---
+###五. Thanks
+- [CSDN:张鸿洋](http://blog.csdn.net/lmj623565791)
 
 
 
