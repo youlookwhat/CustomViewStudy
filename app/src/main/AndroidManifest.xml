@@ -24,14 +24,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.CustomTitleViewActivity" />
-        <activity android:name=".activity.CustomImageViewActivity" />
-        <activity android:name=".activity.CustomProgressBarActivity" />
-        <activity android:name=".activity.CustomVolumControlBarActivity" />
-        <activity android:name=".activity.CustomImgContainerActivity" />
-        <activity android:name=".activity.DeepUnderstandAttrActivity" />
-        <activity android:name=".activity.VDHLayoutActivity" />
-        <activity android:name=".activity.VDHDeepLayoutActivity" />
+        <activity
+            android:name=".activity.CustomTitleViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CustomImageViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CustomProgressBarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CustomVolumControlBarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CustomImgContainerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DeepUnderstandAttrActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VDHLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VDHDeepLayoutActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

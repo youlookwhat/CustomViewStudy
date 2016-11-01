@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -11,45 +11,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jingbin.customview.MainActivity">
 
-    <Button
-        android:id="@+id/bt_custom_view_01"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义View (一)" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/bt_custom_view_02"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义View (二) 进阶" />
+        <Button
+            android:id="@+id/bt_custom_view_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义View (一)" />
 
-    <Button
-        android:id="@+id/bt_custom_view_03"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义View (三) 圆环交替 等待效果" />
+        <Button
+            android:id="@+id/bt_custom_view_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义View (二) 进阶" />
 
-    <Button
-        android:id="@+id/bt_custom_view_04"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="自定义View (四) 视频音量调控" />
+        <Button
+            android:id="@+id/bt_custom_view_03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义View (三) 圆环交替 等待效果" />
 
-    <Button
-        android:id="@+id/bt_custom_view_05"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="手把手教您自定义ViewGroup(一)" />
+        <Button
+            android:id="@+id/bt_custom_view_04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义View (四) 视频音量调控" />
 
-    <Button
-        android:id="@+id/bt_custom_view_06"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="深入理解Android中的自定义属性" />
+        <Button
+            android:id="@+id/bt_custom_view_05"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="手把手教您自定义ViewGroup(一)" />
 
-    <Button
-        android:id="@+id/bt_custom_view_07"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ViewDragHelper完全解析" />
-</LinearLayout>
+        <Button
+            android:id="@+id/bt_custom_view_06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="深入理解Android中的自定义属性" />
+
+        <Button
+            android:id="@+id/bt_custom_view_07"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ViewDragHelper完全解析" />
+
+    </LinearLayout>
+</ScrollView>

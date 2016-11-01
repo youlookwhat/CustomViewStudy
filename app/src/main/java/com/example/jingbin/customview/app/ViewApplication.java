@@ -18,7 +18,11 @@ public class ViewApplication extends Application {
 
     public static ViewApplication getInstance() {
         if (viewApplication == null) {
-            viewApplication = new ViewApplication();
+            synchronized (ViewApplication.class) {
+                if (viewApplication == null) {
+                    viewApplication = new ViewApplication();
+                }
+            }
         }
         return viewApplication;
     }
