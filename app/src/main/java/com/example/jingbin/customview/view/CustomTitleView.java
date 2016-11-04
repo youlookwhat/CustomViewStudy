@@ -135,7 +135,7 @@ public class CustomTitleView extends View {
         // 源码
         sourceOnMeasure(widthMeasureSpec, heightMeasureSpec);
 
-
+//        setMeasuredDimension(widthMeasureSpec, heightMeasureSpec);
     }
 
     /**
@@ -224,13 +224,14 @@ public class CustomTitleView extends View {
         Log.e("-----onDraw:", "111");
         mPaint.setColor(Color.BLACK);
         mPaint.setAntiAlias(true);
+        mPaint.setTextAlign(Paint.Align.LEFT);
         // 画布,左上右下
         canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint); // getMeasuredWidth()也可以。
         // 画笔
         mPaint.setColor(mTitleTextColor);
         // 画布,画Text  *****
         /**
-         * 用的是其中一个drawText重载方法:canvas.drawText(String text,float x,float y,Paint paint); x和y是绘制时的起点坐标(左下角)
+         * 用的是其中一个drawText重载方法:canvas.drawText(String text,float x,float y,Paint paint);
          * x和y是绘制时的起点坐标, getWidth() / 2 - mRect.width() / 2 其实是为了居中绘制文本,
          * getWidth()是获取自定义View的宽度,
          * mRect.width()是获取文本的宽度,
@@ -243,6 +244,7 @@ public class CustomTitleView extends View {
          * */
         Log.e("---->", "getWidth():" + getWidth());
         Log.e("---->", "mRect.width():" + mRect.width());
+        // 这样写会自动居中(但会有一点误差,以为文字会自带一点默认间距)
 //        canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2, getHeight() / 2 + mRect.height() / 2, mPaint);
         canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
 //        canvas.drawText(mTitleText, getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
