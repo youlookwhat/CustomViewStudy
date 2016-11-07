@@ -1,10 +1,8 @@
 # CustomViewStudy
-自定义控件练习
----
-###参照Hongyang的CSDN博客所写：
->[http://blog.csdn.net/lmj623565791/article/category/2680591](http://blog.csdn.net/lmj623565791/article/category/2680591)
+> This repository is used to learn CustomView(Text、Image、Progress、ViewGroup、ViewGragHelper).
 
-###一. Blog Catalogue：
+
+## Blog Catalogue：
 
 ####1. [Android 自定义View (一)](http://blog.csdn.net/lmj623565791/article/details/24252901)
 
@@ -20,9 +18,9 @@
 
 ####7. [Android ViewDragHelper完全解析 自定义ViewGroup神器](http://blog.csdn.net/lmj623565791/article/details/46858663)
 
----
 
-###二. Source Code
+
+## Source Code
 
 >- 1.[CustomTitleView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomTitleView.java)
 
@@ -38,8 +36,8 @@
 
 >- 7.[VDHDeepLayout.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/VDHDeepLayout.java)
 
----
-###三. Picture
+
+## Picture
 <img width="154" height=“274” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_00.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_01.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_02.png"></img>
@@ -49,12 +47,12 @@
 <img width="154" height=“274” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_06.png"></img>
 <img width="154" height=“274” src="https://github.com/youlookwhat/CustomViewStudy/blob/master/file/view_07.png"></img>
 
----
 
-###四. Code Optimization
-####1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android 自定义View (一)优化.md)
 
-#####1.1 关于文字显示优化：
+##  Code Optimization
+###1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android 自定义View (一)优化.md)
+
+####1.1 关于文字显示优化：
 ``` java
 //             int textWidth = mRect.width(); // 这样mRect.width()直接计算出来的会有误差
                float textWidth = mPaint.measureText(mTitleText);
@@ -63,7 +61,7 @@
                 Paint.FontMetrics fontMetrics = mPaint.getFontMetrics();
                 float textHeight = Math.abs((fontMetrics.bottom - fontMetrics.top));
 ```
-#####1.2 onDraw里画Text时起点坐标优化：
+####1.2 onDraw里画Text时起点坐标优化：
 ``` java
 canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
 ``` 
@@ -71,9 +69,9 @@ canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height
 
 >"0":  直接从"0"开始就可以(文字会自带一点默认间距)
 
-####2. 圆环交替 等待效果优化
+###2. 圆环交替 等待效果优化
 
-#####2.1 新开线程画线，离开页面时线程未关闭优化
+####2.1 新开线程画线，离开页面时线程未关闭优化
 
 ``` java
 // 用来开关线程
@@ -112,7 +110,7 @@ Activity相关代码：
         customProgressBar03.setContinue(false);
     }
 ``` 
-#####2.2 用户宽高若设置wrap_content时优化
+####2.2 用户宽高若设置wrap_content时优化
 ``` java
 @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -129,9 +127,11 @@ Activity相关代码：
         setMeasuredDimension(width, width);
     }
 ``` 
----
 
-###五. Thanks
+## Reference
+[http://blog.csdn.net/lmj623565791/article/category/2680591](http://blog.csdn.net/lmj623565791/article/category/2680591)
+
+##  Thanks
 - [CSDN:张鸿洋](http://blog.csdn.net/lmj623565791)
 
 
