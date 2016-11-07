@@ -129,7 +129,7 @@ Activity相关代码：
 ``` 
 
 ## Reference
-[http://blog.csdn.net/lmj623565791/article/category/2680591](http://blog.csdn.net/lmj623565791/article/category/2680591)
+- [http://blog.csdn.net/lmj623565791/article/category/2680591](http://blog.csdn.net/lmj623565791/article/category/2680591)
 
 ##  Thanks
 - [CSDN:张鸿洋](http://blog.csdn.net/lmj623565791)
