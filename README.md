@@ -128,6 +128,9 @@ Activity相关代码：
     }
 ``` 
 
+##Download
+ - [CustomViewStudy.apk](http://download.csdn.net/detail/jingbin_/9678501)
+
 ## Reference
 - [http://blog.csdn.net/lmj623565791/article/category/2680591](http://blog.csdn.net/lmj623565791/article/category/2680591)
 
