@@ -1,5 +1,5 @@
 # CustomViewStudy
-> This repository is used to learn CustomView(Text、Image、Progress、ViewGroup、ViewGragHelper).
+> 这里的内容是 鸿洋Android自定义控件之起步栏的所有示例代码集合,其中优化了很多细节和相关逻辑。如有错误欢迎指正,如有侵权,请联系我删除。
 
 
 ## Blog Catalogue：
