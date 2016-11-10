@@ -61,7 +61,7 @@ public class CustomImgContainer extends ViewGroup {
 //        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         Log.e("----->", "onMeasure");
         /**
-         * 获得此ViewGroup上级容器为其推荐的宽和高,以及设计模式
+         * 获得此ViewGroup上级容器为其推荐的宽和高,以及计算模式
          */
         int modeWidth = MeasureSpec.getMode(widthMeasureSpec);
         int modeHight = MeasureSpec.getMode(heightMeasureSpec);
