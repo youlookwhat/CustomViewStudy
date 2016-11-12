@@ -1,5 +1,5 @@
 # CustomViewStudy
-> 参照Hongyang的CSDN所写，具体细节优化请见博客：[http://blog.csdn.net/jingbin_/article/category/6187475](http://blog.csdn.net/jingbin_/article/category/6187475)。如有错误欢迎指正，如有侵权，请联系我删除。
+> 参照Hongyang的CSDN博客所写，具体细节优化请见[这里](http://blog.csdn.net/jingbin_/article/category/6187475)。如有错误欢迎指正，如有侵权，请联系我删除。
 
 
 ## Blog Catalogue：
