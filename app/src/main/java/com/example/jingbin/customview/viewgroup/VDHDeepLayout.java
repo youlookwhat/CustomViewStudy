@@ -69,7 +69,7 @@ public class VDHDeepLayout extends LinearLayout {
             }
 
             /**
-             * 对移动的Y边界进行控制
+             * 优化了一下，对移动的Y边界进行控制
              */
             @Override
             public int clampViewPositionVertical(View child, int top, int dy) {
