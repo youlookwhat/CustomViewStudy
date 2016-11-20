@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:padding="3dp"
         custom:titleText="8529"
         custom:titleTextColor="@android:color/holo_red_light"
         custom:titleTextSize="40sp" />
@@ -40,6 +41,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@android:color/black"
+        android:padding="3dp"
         android:text="8529"
         android:textColor="@android:color/white"
         android:textSize="40sp" />
