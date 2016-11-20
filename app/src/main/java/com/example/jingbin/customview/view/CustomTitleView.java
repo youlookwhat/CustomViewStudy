@@ -244,9 +244,10 @@ public class CustomTitleView extends View {
          * */
         Log.e("---->", "getWidth():" + getWidth());
         Log.e("---->", "mRect.width():" + mRect.width());
-        // 这样写会自动居中(但会有一点误差,以为文字会自带一点默认间距)
-//        canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2, getHeight() / 2 + mRect.height() / 2, mPaint);
-        canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
+        // 这样写会自动居中(但会有一点误差,以为文字会自带一点默认间距," - mRect.left"就好,csdn:[Zohar_zou]解决)
+        canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2 - mRect.left, getHeight() / 2 + mRect.height() / 2, mPaint);
+        // 不会居中
+//         canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
 //        canvas.drawText(mTitleText, getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
     }
 }
