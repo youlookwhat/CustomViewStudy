@@ -63,11 +63,11 @@
 ```
 ####1.2 onDraw里画Text时起点坐标优化：
 ``` java
-canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height() / 2, mPaint);
+canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2 - mRect.left, getHeight() / 2 + mRect.height() / 2, mPaint);
 ``` 
 >canvas.drawText(String text,float x,float y,Paint paint); x和y是绘制时的起点坐标(左下角);
 
->"0":  直接从"0"开始就可以(文字会自带一点默认间距)
+>" - mRect.left":  就很标准，居中显示(csdn:yql_running解决)
 
 ###2. 圆环交替 等待效果优化
 
