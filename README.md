@@ -44,7 +44,7 @@
 
 
 ##  Code Optimization
-### 1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android 自定义View (一)优化.md)
+### 1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android自定义View(一)优化.md)
 
 #### 1.1 关于文字显示优化：
 ``` java
@@ -130,7 +130,6 @@ Activity相关代码：
 
 ##  Thanks
 - [CSDN:张鸿洋](http://blog.csdn.net/lmj623565791)
-
 
 
 
