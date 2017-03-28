@@ -55,6 +55,6 @@ canvas.drawText(mTitleText, 0 + getPaddingLeft(), getHeight() / 2 + mRect.height
 
 
 ### 1.3 参考文档
-- 1.[Android 自定义View-怎么绘制居中文本？] (http://blog.csdn.net/u014702653/article/details/51985821)
+- 1.[Android 自定义View-怎么绘制居中文本](http://blog.csdn.net/u014702653/article/details/51985821)
 
 - 2.[Android的DrawText详解](http://blog.csdn.net/linghu_java/article/details/46404081)
