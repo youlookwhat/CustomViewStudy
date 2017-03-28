@@ -23,17 +23,11 @@
 ## Source Code
 
 >- 1.[CustomTitleView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomTitleView.java)
-
 >- 2.[CustomImageView.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomImageView.java)
-
 >- 3.[CustomProgressBar.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomProgressBar.java)
-
 >- 4.[CustomVolumControlBar.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/view/CustomVolumControlBar.java)
-
 >- 5.[CustomImgContainer.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/CustomImgContainer.java)
-
 >- 6.[DeepUnderstandAttrActivity.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/activity/DeepUnderstandAttrActivity.java)
-
 >- 7.[VDHDeepLayout.java](https://github.com/youlookwhat/CustomViewStudy/blob/master/app/src/main/java/com/example/jingbin/customview/viewgroup/VDHDeepLayout.java)
 
 
@@ -50,9 +44,9 @@
 
 
 ##  Code Optimization
-###1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android 自定义View (一)优化.md)
+### 1. [CustomTitleView优化](https://github.com/youlookwhat/CustomViewStudy/blob/master/file/Android 自定义View (一)优化.md)
 
-####1.1 关于文字显示优化：
+#### 1.1 关于文字显示优化：
 ``` java
 //             int textWidth = mRect.width(); // 这样mRect.width()直接计算出来的会有误差
                float textWidth = mPaint.measureText(mTitleText);
@@ -61,7 +55,7 @@
                 Paint.FontMetrics fontMetrics = mPaint.getFontMetrics();
                 float textHeight = Math.abs((fontMetrics.bottom - fontMetrics.top));
 ```
-####1.2 onDraw里画Text时起点坐标优化：
+#### 1.2 onDraw里画Text时起点坐标优化：
 ``` java
 canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2 - mRect.left, getHeight() / 2 + mRect.height() / 2, mPaint);
 ``` 
@@ -69,9 +63,9 @@ canvas.drawText(mTitleText, getWidth() / 2 - mRect.width() / 2 - mRect.left, get
 
 >" - mRect.left":  就很标准，居中显示(csdn:yql_running解决)
 
-###2. 圆环交替 等待效果优化
+### 2. 圆环交替 等待效果优化
 
-####2.1 新开线程画线，离开页面时线程未关闭优化
+#### 2.1 新开线程画线，离开页面时线程未关闭优化
 
 ``` java
 // 用来开关线程
@@ -110,7 +104,7 @@ Activity相关代码：
         customProgressBar03.setContinue(false);
     }
 ``` 
-####2.2 用户宽高若设置wrap_content时优化
+#### 2.2 用户宽高若设置wrap_content时优化
 ``` java
 @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -128,7 +122,7 @@ Activity相关代码：
     }
 ``` 
 
-##Download
+## Download
  - [CustomViewStudy.apk](http://download.csdn.net/detail/jingbin_/9678501)
 
 ## Reference
